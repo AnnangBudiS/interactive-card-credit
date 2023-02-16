@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Space Grotesk', sans-serif;
+  max-width: 1440px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.front-card {
+  width: 250px;
+  height: 150px;
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 130px;
+  left: 30px;
+  z-index: 1;
 }
+
+.back-card {
+  width: 250px;
+  height: 150px;
+  background-image: url("images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 50px;
+  left: 80px;
+}
+
+/* .form {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  justify-content: center;
+  margin: 100px 30px 
+} */
+
+@media (min-width: 450px) {
+  .front-card {
+    width: 400px;
+    height: 250px;
+    background-image: url("images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 200px;
+    left: 200px;
+  }
+  
+  .back-card {
+    width: 400px;
+    height: 250px;
+    background-image: url("images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 500px;
+    left: 300px;
+  }
+}
+
+
